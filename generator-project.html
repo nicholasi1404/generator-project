@@ -12,24 +12,29 @@
     <script>
         // jQuery javascript
         $(function() {
-
+            $('button').click(function() {
+                var name = $("#name").val();
+                var party = $("#party").val();
+                var elected = $("#elected").val();
+              
+            })
         });
     </script>
 </head>
 
 <body>
     <h1>Run For President!</h1>
-    What is your name?  <input id="name"><br><br> 
-    Pick a party  <select>
-  <option value="democrat">Democrat</option>
-  <option value="republican">Republican</option>
-  <option value="independent">Independent</option>
-</select><br><br>
-What will you do if you get elected?  <input id="do"><br><br>
-<button>Make me the President!</button>
+    What is your name? <input id="name"><br><br> 
+    Pick a party <select id="party">
+      <option value="democrat">Democrat</option>
+        <option value="republican">Republican</option>
+      <option value="independent">Independent</option>
+</select><br><br> 
+
+    What will you do if you get elected? <input id="elected"><br><br>
+    
+    <button>Make me the President!</button>
 </body>
 
 </html>
-//if (theme == "modern"){
-    $('h1').css
-}//
+
