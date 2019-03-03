@@ -10,13 +10,26 @@
     <script>
         $(function() {
             $('button').click(function() {
-
-                var name = $("#name").val();
+                
+                var name = $("#name").val();        // collects name/party inputs
                 var party = $("#party").val();
                 var elected = $("#elected").val();
-                $("body").css("background", "LightCoral")
+                
+                var democrat = {'background-color': "DeepSkyBlue" }; //party = certain color based on input
+                var republican = {'background-color': "OrangeRed" };
+                var independent = {'background-color': "Khaki" };
+                
+                if (party == democrat) {
+                    $("body").css(democrat);
+                } else if (party == republican) {
+                    $("body").css("background", "OrangeRed");
+                } else {
+                    $("body").css("background", "Khaki");
+                }
+                
+                console.log(democrat)
                 $("h2").html("Hello, I am " + name + " and if you elect me for president  " + elected);
-
+                
             });
         });
     </script>
@@ -33,7 +46,7 @@
         
       <option value="independent">Independent</option>
       
-</select><br><br> What will you do if you get elected?<br> (First write 'I will') <input id="elected"><br><br>
+</select><br><br> What will you do if you get elected?<br> (First write, 'I will') <input id="elected"><br><br>
 
     <button>Make Me The President!</button>
     <h2 id="finaltext"></h2>
