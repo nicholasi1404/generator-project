@@ -15,20 +15,18 @@
                 var party = $("#party").val();
                 var elected = $("#elected").val();
                 
-                var democrat = {'background-color': "DeepSkyBlue" }; //party = certain color based on input
-                var republican = {'background-color': "OrangeRed" };
-                var independent = {'background-color': "Khaki" };
-                
-                if (party == democrat) {
-                    $("body").css(democrat);
-                } else if (party == republican) {
-                    $("body").css("background", "OrangeRed");
+               
+                if (party == "democrat") {
+                    $("body").css("background", "DeepSkyBlue");
+                    //$("img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/DemocraticLogo.svg/2000px-DemocraticLogo.svg.png")
+                } else if (party == "republican") {
+                    $("body").css("background", "LightCoral");
                 } else {
                     $("body").css("background", "Khaki");
                 }
                 
-                console.log(democrat)
-                $("h2").html("Hello, I am " + name + " and if you elect me for president  " + elected);
+                
+                $("h2").html("Vote for me, " + name + " of the " + party + " party and " + elected);
                 
             });
         });
@@ -46,7 +44,13 @@
         
       <option value="independent">Independent</option>
       
-</select><br><br> What will you do if you get elected?<br> (First write, 'I will') <input id="elected"><br><br>
+</select><br><br>
+
+    What will you do if you get elected?<br> (First write, <strong>'I will'</strong>) <input id="elected"><br><br>
 
     <button>Make Me The President!</button>
+    
     <h2 id="finaltext"></h2>
+    
+    <img src="">
+    
