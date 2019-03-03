@@ -5,36 +5,35 @@
     <meta charset="UTF-8">
     <title>generator-project</title>
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js">
-    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
     <script>
-        // jQuery javascript
         $(function() {
             $('button').click(function() {
+
                 var name = $("#name").val();
                 var party = $("#party").val();
                 var elected = $("#elected").val();
-              
-            })
+                $("body").css("background", "LightCoral")
+                $("h2").html("Hello, I am " + name + " and if you elect me for president  " + elected);
+
+            });
         });
     </script>
 </head>
 
 <body>
     <h1>Run For President!</h1>
-    What is your name? <input id="name"><br><br> 
+    Enter Your Name <input id="name"><br><br>
+    
     Pick a party <select id="party">
       <option value="democrat">Democrat</option>
+      
         <option value="republican">Republican</option>
+        
       <option value="independent">Independent</option>
-</select><br><br> 
+      
+</select><br><br> What will you do if you get elected?<br> (First write 'I will') <input id="elected"><br><br>
 
-    What will you do if you get elected? <input id="elected"><br><br>
-    
-    <button>Make me the President!</button>
-</body>
-
-</html>
-
+    <button>Make Me The President!</button>
+    <h2 id="finaltext"></h2>
