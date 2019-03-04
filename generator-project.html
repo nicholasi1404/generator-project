@@ -18,15 +18,17 @@
                
                 if (party == "democrat") {
                     $("body").css("background", "DeepSkyBlue");
-                    //$("img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/DemocraticLogo.svg/2000px-DemocraticLogo.svg.png")
+                    $("img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/DemocraticLogo.svg/2000px-DemocraticLogo.svg.png")
                 } else if (party == "republican") {
                     $("body").css("background", "LightCoral");
+                    $("img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Republicanlogo.svg/1179px-Republicanlogo.svg.png")
                 } else {
-                    $("body").css("background", "Khaki");
+                    $("body").css("background", "YellowGreen");
+                    $("img").attr("src", "https://upload.wikimedia.org/wikipedia/commons/8/83/Green_Party_of_Aotearoa_New_Zealand_logo.jpg")
                 }
                 
                 
-                $("h2").html("Vote for me, " + name + " of the " + party + " party and " + elected);
+                $("h2").html("I am " + name + " , leader of the " + party + " party and if you vote for me " + elected);
                 
             });
         });
@@ -42,7 +44,7 @@
       
         <option value="republican">Republican</option>
         
-      <option value="independent">Independent</option>
+      <option value="green">Green</option>
       
 </select><br><br>
 
@@ -50,7 +52,12 @@
 
     <button>Make Me The President!</button>
     
-    <h2 id="finaltext"></h2>
+    <h2 id="result"></h2>
     
-    <img src="">
+    <img src="" height="300" width="500">
     
+    
+    
+    
+    
+</body>
